@@ -23,7 +23,7 @@ int main()
     cout << "---------------------"<<endl;
     int n;
     cout << "Enter the size:";
-    //cin >> n;
+    cin >> n;
     int C[n];
     for (int i = 0; i < n; i++)
     {
