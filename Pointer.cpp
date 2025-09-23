@@ -24,7 +24,7 @@ int main()
     {
         cout << p[i] << endl; // if we dont use star(*) then it will print values and if we use star then it will print addresses
     }
-    //delete[] p; // deleting from the heap memory that is using in C++
+    // delete[] p; // deleting from the heap memory that is using in C++
 
     cout << "-------------------------Checking Sizes" << endl;
     int *p1;
@@ -33,11 +33,26 @@ int main()
     double *p4;
     struct Rectangle *p5;
 
+    cout << sizeof(p1) << endl;
+    cout << sizeof(p2) << endl;
+    cout << sizeof(p3) << endl;
+    cout << sizeof(p4) << endl;
+    cout << sizeof(p5) << endl;
 
-    cout<<sizeof(p1)<<endl;
-    cout<<sizeof(p2)<<endl;
-    cout<<sizeof(p3)<<endl;
-    cout<<sizeof(p4)<<endl;
-    cout<<sizeof(p5)<<endl;
-    
+    cout << "-------------------------" << endl;
+    Rectangle r2 = {20, 30}; // we can use just Name in c++ compiler but we need to write struct in c compiler
+    Rectangle *p6 = &r2;     // initializing with declaration
+    p6->length = 40;         // if we want to assign value using pointer we have to use arrow
+    // OR-----
+    (*p6).breadth = 60; // Or we can use like this
+    cout << r2.length << " " << r2.breadth << endl;
+
+    // *********For Taking the memory in HEAP**********
+    Rectangle *pointer;
+    pointer = (struct Rectangle *)malloc(sizeof(struct Rectangle));
+    pointer->breadth = 2;
+    pointer->length = 1;
+
+    cout << "------From the Heap------" << endl
+         << pointer->breadth << " " << pointer->length << endl;
 }
