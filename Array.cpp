@@ -10,6 +10,18 @@ void func(int A[], int n)
     }
 }
 
+// Returning array from function using heap memory
+int *fun(int n)
+{
+    int *p;
+    p = new int[n]; // taking memory from heap using new keyword in C++
+    for(int i=0; i<n; i++)
+    {
+        p[i] = i*2;
+    }
+    return p; // returning the pointer
+}
+
 int main()
 {
     int A[5]; // In the memory integers take 4 bytes
@@ -48,6 +60,13 @@ int main()
     // 2D Array
     int D[4] = {0, 1, 2, 3};
     func(D, 4);
+
+
+    cout << "----------Returning Array using Function And Using Heap memory-----------" << endl;
+    int *arr;
+    arr = fun(5);
+    for (int i = 0; i < 5; i++)
+    cout<< arr[i] << endl;
 
     return 0;
 }
