@@ -26,7 +26,7 @@ int main()
     }
     // delete[] p; // deleting from the heap memory that is using in C++
 
-    cout << "-------------------------Checking Sizes" << endl;
+    cout << "------------Checking Sizes-------------" << endl;
     int *p1;
     char *p2;
     float *p3;
