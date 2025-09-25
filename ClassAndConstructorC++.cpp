@@ -12,11 +12,6 @@ public:
         breadth = b;
     }
 
-    void changeLength(int l)
-    {
-        length = l;
-    }
-
     int area()
     {
         return length * breadth;
@@ -25,6 +20,10 @@ public:
     int getLength()
     { // getter
         return length;
+    }
+    void setLength(int l) //setter
+    {
+        length = l;
     }
     int getBreadth()
     { // getter
@@ -40,6 +39,6 @@ int main()
 
     cout << "Area:" << r.area() << endl;
 
-    r.changeLength(20); // changing the length of the structure.
+    r.setLength(20); // changing the length of the structure.
     cout << "Changed Length:" << r.getLength() << endl;
 }
