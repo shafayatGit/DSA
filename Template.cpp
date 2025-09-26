@@ -37,6 +37,6 @@ int main()
 {
     Arithmetic<int> ar(10, 5); // Here we are creating object of type int from the main function
     cout << "Add: " << ar.add() << " Sub: " << ar.sub() << endl;
-    Arithmetic<float> arf(5.5, 2.5); // Here we are creating object of type float from the main function
+    Arithmetic<float> arf(5.5, 2.5); // Here we are creating object of type float from the main function.
     cout << "Add: " << arf.add() << " Sub: " << arf.sub() << endl;
 }
